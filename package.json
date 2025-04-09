@@ -1,0 +1,20 @@
+{
+  "name": "fake-store",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "gh-pages": "^4.0.0"
+  },
+  "devDependencies": {
+    "vite": "^6.2.0"
+  },
+  "homepage": "https://anixgg.github.io/fake-store"
+}
