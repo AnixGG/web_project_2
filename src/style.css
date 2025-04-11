@@ -15,13 +15,6 @@ header {
     align-items: center;
 }
 
-nav {
-    background-color: #3a3f4b;
-    padding: 0.5rem 1rem;
-    display: flex;
-    justify-content: space-between;
-}
-
 button {
     background-color: #61dafb;
     color: #282c34;
@@ -36,15 +29,7 @@ button:hover {
     background-color: #4fc1e9;
 }
 
-#cart-counter, #cart-preview {
-    background-color: #61dafb;
-    color: #282c34;
-    padding: 5px 10px;
-    border-radius: 4px;
-    font-weight: bold;
-}
-
-.products-grid {
+.products {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
@@ -90,14 +75,15 @@ button:hover {
     margin: 10px 0;
 }
 
-.product-details-container {
-    max-width: 800px;
-    margin: 20px auto;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    display: none;
+.product-details {
+  max-width: 800px;
+  width: calc(100% - 40px); /* Защита от прилипания к краям на мобильных */
+  margin: 2rem auto;
+  padding: 40px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
 .detail-image {
@@ -139,28 +125,6 @@ button:hover {
     font-weight: bold;
 }
 
-#loading {
-    text-align: center;
-    padding: 40px;
-    font-size: 1.2rem;
-}
-
 .hidden {
     display: none;
-}
-
-@keyframes spin {
-    to { transform: rotate(360deg); }
-}
-
-.loading::after {
-    content: "";
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    border: 3px solid rgba(0,0,0,.1);
-    border-radius: 50%;
-    border-top-color: #61dafb;
-    animation: spin 1s ease-in-out infinite;
-    margin-left: 10px;
 }

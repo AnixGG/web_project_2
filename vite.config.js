@@ -1,7 +1,9 @@
-import { defineConfig } from 'vite'
+import {
+    defineConfig
+} from 'vite'
 
 export default defineConfig({
-    base: '/fake-store/',
+    base: '/web-project-2/',
     server: {
         historyApiFallback: true
     }
